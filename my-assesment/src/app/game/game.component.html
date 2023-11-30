@@ -1,0 +1,71 @@
+<div class="card">
+  <p-splitter [style]="{ height: '600px' }" styleClass="mb-5">
+    <ng-template pTemplate>
+      <div class="col panel1">
+        <button pButton pRipple label="Let Start" class="p-button-success" (click)="initializeGame()"></button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate>
+      <div class="col flex align-items-center justify-content-center">
+        <div *ngIf="gameInitialized" class="home-right">
+          <h2>Guess the Number</h2>
+          <div class="inputs">
+            <div class="input">
+              <label for="range">Range</label>
+              <select name="" id="" [(ngModel)]="numberRange">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+            <div class="input">
+              <label>Your Guess:</label>
+              <input type="number" [(ngModel)]="userGuess" />
+            </div>
+            <div class="input">
+              <label for="">Difficulty level</label>
+              <select id="" [(ngModel)]="difficultyLevel" (change)="onDifficultyLevelChange()">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="result-container" *ngIf="showResult" [ngStyle]="{'background-color': getColor()}">
+            <div class="result">
+              {{errorMessage}}
+            </div>
+          </div>
+
+          <div class="btn-container">
+            <button (click)="verifyUserGuess()" class="btn btn-primary btn-sm">Try</button>
+            <button (click)="initializeGame()" class="btn btn-primary btn-sm">Restart gggg</button>
+          </div>
+
+          <div class="metadata">
+            <div class="boxdata">
+              <p>Guesses</p>
+              <p>{{numberOfAttempts}}</p>
+            </div>
+            <div class="boxdata">
+              <p>Score</p>
+              <p>{{userScore}}</p>
+            </div>
+            <div class="boxdata">
+              <p>Tries left</p>
+              <p>{{maxAttemptsAllowed}}</p>
+            </div>
+          </div>
+
+          <div class="timer">
+            <p>{{ timer$ | async }}</p>
+          </div>
+
+          <button class="btn btn-primary btn-sm btn-score" (click)="saveUserHighScore()">Save High Score</button>
+        </div>
+      </div>
+    </ng-template>
+  </p-splitter>
+</div>

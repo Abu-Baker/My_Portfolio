@@ -1,0 +1,119 @@
+.panel1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+.card {
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .p-splitter {
+    height: 300px;
+  }
+  
+  .p-templates .col {
+    padding: 20px;
+  }
+  
+  .p-button-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .home-right {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .inputs {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  select,
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .result-container {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .result {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .metadata {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-radius: 15px; /* Adjust the value based on your preference */
+    overflow: hidden; 
+    background-color: aqua;  /* Ensures the border-radius is applied correctly */
+  }
+  
+  .boxdata {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .boxdata p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .metadata p {
+    font-size: 1rem;
+  }
+  .boxdata {
+    text-align: center;
+  }
+  
+  .timer {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .btn-score {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-score:hover {
+    background-color: #0056b3;
+  }
+  
